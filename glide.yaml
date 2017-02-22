@@ -1,0 +1,6 @@
+package: github.com/checkr/influxdb-subscription-cleaner
+import:
+- package: github.com/influxdata/influxdb
+  subpackages:
+  - client/v2
+- package: github.com/spf13/viper
