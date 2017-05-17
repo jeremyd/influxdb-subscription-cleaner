@@ -65,6 +65,8 @@ func main() {
 	checkIfSet("url")
 	// If interval is set, re-run every interval hours.
 	if viper.IsSet("interval") {
+		fmt.Printf("Starting up and cleaning.")
+		clean()
 		fmt.Printf("Cleaning subscriptions every %d seconds\n", viper.GetInt("interval"))
 		ticker := time.NewTicker(time.Second * viper.GetDuration("interval"))
 		go func() {
