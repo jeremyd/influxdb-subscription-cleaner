@@ -42,7 +42,7 @@ func clean() {
 				retention := v[0]
 				dbname := sub.Name
 				name := v[1]
-				dropQuery := fmt.Sprintf("drop subscription \"%s\" on %s.\"%s\"", name, dbname, retention)
+				dropQuery := fmt.Sprintf("drop subscription \"%s\" on \"%s\".\"%s\"", name, dbname, retention)
 				if viper.IsSet("dryrun") {
 					fmt.Printf("we would run: %s\n", dropQuery)
 				} else {
